@@ -2,10 +2,13 @@ package nandu.springframework.petclinic.services.map;
 
 import java.util.Set;
 
-import nandu.springframework.petclinic.model.Pet;
-import nandu.springframework.petclinic.services.CrudService;
+import org.springframework.stereotype.Service;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+import nandu.springframework.petclinic.model.Pet;
+import nandu.springframework.petclinic.services.PetService;
+
+@Service
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
 	@Override
 	public Set<Pet> findAll() {
